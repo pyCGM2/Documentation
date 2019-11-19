@@ -1,0 +1,1621 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Nexus API &mdash; pyCGM2-Documentation 3.2.15 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="High-level functions" href="highLevelFunction.html" />
+    <link rel="prev" title="Nexus Operations" href="nexusOperations.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pyCGM2-Documentation
+          
+
+          
+            
+            <img src="_static/pyCGM2logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">Settings</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nexusOperations.html">Nexus Operations</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Nexus API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="highLevelFunction.html">High-level functions</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="thirdParty.html">Third party package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyCGM2-Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Nexus API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/nexusAPI.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nexus-api">
+<h1>Nexus API<a class="headerlink" href="#nexus-api" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="ViconNexus.ViconNexus">
+<em class="property">class </em><code class="descclassname">ViconNexus.</code><code class="descname">ViconNexus</code><a class="headerlink" href="#ViconNexus.ViconNexus" title="Permalink to this definition">¶</a></dt>
+<dd><p>ViconNexus Creates a connection to Vicon Nexus for offline
+data access</p>
+<p>Documentation and usage examples provided assume that an object named
+vicon has been created to access the class methods
+vicon = ViconNexus()</p>
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.ClearAllEvents">
+<code class="descname">ClearAllEvents</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.ClearAllEvents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete all events currently defined in the loaded trial</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.CloseTrial">
+<code class="descname">CloseTrial</code><span class="sig-paren">(</span><em>timeout</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.CloseTrial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close the trial currently open in the connected host application without saving.
+This command may be used from within Python but can not be used in a script that is 
+executing from the application.
+The trial will fail to close if a pipeline is running or the application is is live mode.</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd><dl class="first last docutils">
+<dt>timeout     = integer value, timeout value (in seconds) used to return control in the case that</dt>
+<dd>the trial does not close in a timely fashion. It is important to note that
+the timeout value has no effect in the host application itself and the trial
+may continue to save after the time allocated has expired.</dd>
+</dl>
+</dd>
+</dl>
+<p>Usage Example:</p>
+<blockquote>
+<div>vicon.CloseTrial( 30 )</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.Connect">
+<code class="descname">Connect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.Connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Re-connect to the host application if we are not currently connected</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.CreateAnEvent">
+<code class="descname">CreateAnEvent</code><span class="sig-paren">(</span><em>subject</em>, <em>context</em>, <em>event</em>, <em>frame</em>, <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.CreateAnEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new event at the specifed ( frame + offset )</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd><p class="first">subject     = string, name of an existing subject
+context     = string, name of the context.</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><a href="#id1"><span class="problematic" id="id2">**</span></a>* use the DisplayCommandHelp method to get more information on</dt>
+<dd>context names that are valid for the connected application</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>event      = string, name of the event type. </dt>
+<dd><dl class="first last docutils">
+<dt><a href="#id3"><span class="problematic" id="id4">**</span></a>* use the DisplayCommandHelp method to get more information on</dt>
+<dd>event type names that are valid for the connected application</dd>
+</dl>
+</dd>
+</dl>
+<p>frame      = integer value, trial frame number as displayed in the application time bar
+offset     = double value, offset (in seconds) from the beginning of the frame to the event occurrence</p>
+<blockquote class="last">
+<div>The value should be in the range of 0.00 to 1/FrameRate</div></blockquote>
+</dd>
+</dl>
+<p>Usage Example:</p>
+<blockquote>
+<div>vicon.CreateAnEvent( ‘Patricia’, ‘Foot Strike’, ‘Left’, 137, 0.0 )</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.CreateAnalysisParam">
+<code class="descname">CreateAnalysisParam</code><span class="sig-paren">(</span><em>subject</em>, <em>param</em>, <em>value</em>, <em>unit</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.CreateAnalysisParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new analysis parameter for the specified subject. 
+Analysis parameter names must be unique within the subject.</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd><p class="first">subject = string, name of an existing subject  
+param  = string, name of the new analysis parameter 
+value  = floating point number, desired value of the analysis parameter
+unit   = string, unit associated with the value</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt><a href="#id5"><span class="problematic" id="id6">**</span></a>* use the DisplayCommandHelp method to get more information on</dt>
+<dd>units that are valid for the connected application</dd>
+</dl>
+</div></blockquote>
+</dd>
+</dl>
+<p>Usage Example: create a new analysis parameter</p>
+<blockquote>
+<div>vicon.CreateAnalysisParam( ‘Colin’, ‘MyParam’, 1.23, ‘mm’ )</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.CreateModelOutput">
+<code class="descname">CreateModelOutput</code><span class="sig-paren">(</span><em>subject</em>, <em>modelOutputName</em>, <em>groupName</em>, <em>componentNames</em>, <em>QuantityTypes</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.CreateModelOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new model output
+Add data to the newly created model output using SetModelOutput or SetModelOutputAtFrame</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd><p class="first">subject     = string, name of an existing subject
+modelOutputName = string, name of new model output associated with the subject
+group   = string, name of the group the model output belongs to
+components = list of strings, list of component names for the model output
+types   = list of strings, list of the quantity types for each component</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt><a href="#id7"><span class="problematic" id="id8">**</span></a>* use the DisplayCommandHelp method to get more information on</dt>
+<dd>quantity types that are valid for the connected application</dd>
+</dl>
+</div></blockquote>
+</dd>
+</dl>
+<p>Usage Example: Create model output matching the Plug-in Gait Bone HED</p>
+<blockquote>
+<div>BonesNames = [‘RX’,’RY’,’RZ’,’TX’,’TY’,’TZ’,’SX’,’SY’,’SZ’]
+BonesTypes = [‘Angle’,’Angle’,’Angle’,’Length’,’Length’,’Length’,’Length’,’Length’,’Length’]
+vicon.CreateModelOutput( ‘Patricia’, ‘HED’, ‘Plug-in Gait Bones’, BonesNames, BonesTypes )</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.CreateModeledMarker">
+<code class="descname">CreateModeledMarker</code><span class="sig-paren">(</span><em>subject</em>, <em>modelOutputName</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.CreateModeledMarker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new model output that can be displayed in the application workspace
+Add data to the newly created model output using SetModelOutput or SetModelOutputAtFrame</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject     = string, name of an existing subject
+modelOutputName = string, name of new model output associated with the subject</dd>
+</dl>
+<p>Usage Example: Create a midpoint</p>
+<blockquote>
+<div><p>vicon.CreateModeledMarker( ‘Colin’, ‘Midpoint’ )
+kneeX, kneeY, kneeZ, kneeExists = vicon.GetTrajectory( ‘Colin’, ‘RKNE’ )
+ankX, ankY, ankZ, ankExists = vicon.GetTrajectory( ‘Colin’, ‘RANK’ )
+data, exists = vicon.GetModelOutput( ‘Colin’, ‘Midpoint’ )
+framecount = vicon.GetFrameCount()
+for i in xrange(framecount):</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>if kneeExists[i] and ankExists[i]</dt>
+<dd>exists[i] = True
+data[0][i] = ( kneeX[i] + ankX[i] ) / 2
+data[1][i] = ( kneeY[i] + ankY[i] ) / 2
+data[2][i] = ( kneeZ[i] + ankZ[i] ) / 2</dd>
+<dt>else:</dt>
+<dd>exists[i] = False</dd>
+</dl>
+</div></blockquote>
+<p>vicon.SetModelOutput( ‘Colin’, ‘Midpoint’, data, exists )</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.CreateSubjectParam">
+<code class="descname">CreateSubjectParam</code><span class="sig-paren">(</span><em>subject</em>, <em>param</em>, <em>value</em>, <em>unit</em>, <em>default</em>, <em>required</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.CreateSubjectParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new subject parameter for the specified subject. 
+Subject parameter names must be unique within the subject.</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd><p class="first">subject = string, name of an existing subject  
+param  = string, name of the new subject parameter 
+value  = floating point number, desired value of the subject parameter
+unit   = string, unit associated with the value</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><a href="#id9"><span class="problematic" id="id10">**</span></a>* use the DisplayCommandHelp method to get more information on</dt>
+<dd>units that are valid for the connected application</dd>
+</dl>
+</div></blockquote>
+<p class="last">default = floating point number, PRIOR value of the subject parameter
+required = logical, indication as to whether the subject parameter is a required parameter</p>
+</dd>
+</dl>
+<p>Usage Example: create a new subject parameter</p>
+<blockquote>
+<div>vicon.CreateSubjectParam( ‘Colin’, ‘MyParam’, 1.23, ‘mm’, 0, False )</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.DisplayCommandHelp">
+<code class="descname">DisplayCommandHelp</code><span class="sig-paren">(</span><em>commandname</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.DisplayCommandHelp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays more detailed information about the specified Vicon SDK command 
+This information is retrieved from the connected application</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.DisplayCommandList">
+<code class="descname">DisplayCommandList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.DisplayCommandList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays a list of commands available in the underlying Vicon SDK for the connected host application</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetAnalysisParam">
+<code class="descname">GetAnalysisParam</code><span class="sig-paren">(</span><em>subject</em>, <em>param</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetAnalysisParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the current value of an analysis parameter</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject = string, name of an existing subject  
+param  = string, name of an existing analysis parameter</dd>
+<dt>Returns</dt>
+<dd>value  = floating point number, current value of the analysis parameter
+hasvalue = logical, indication as to whether the analysis parameter has a value</dd>
+</dl>
+<p>Usage Example: negate the value of a analysis parameter</p>
+<blockquote>
+<div>value = vicon.GetAnalysisParam( ‘Colin’, ‘MyParam’ )
+value = value * (-1)
+vicon.SetAnalysisParam( ‘Colin’, ‘MyParam’, value )</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetAnalysisParamDetails">
+<code class="descname">GetAnalysisParamDetails</code><span class="sig-paren">(</span><em>subject</em>, <em>param</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetAnalysisParamDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve detailed information about an analysis parameter</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject = string, name of an existing subject  
+param  = string, name an existing analysis parameter</dd>
+<dt>Returns</dt>
+<dd><p class="first">value  = floating point number, current value of the analysis parameter
+unit   = string, unit associated with the value</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><a href="#id11"><span class="problematic" id="id12">**</span></a>* use the DisplayCommandHelp method to get more information on</dt>
+<dd>units that are valid for the connected application</dd>
+</dl>
+</div></blockquote>
+<p class="last">hasvalue = logical, indication as to whether the analysis parameter has a value</p>
+</dd>
+</dl>
+<p>Usage Example: Display analysis parameter details</p>
+<blockquote>
+<div><p>value, unit, default, required = vicon.GetAnalysisParamDetails( ‘Colin’, ‘MyParam’ )</p>
+<p>ParamInfo = ‘MyParam = {0} [{1}]’.format( value, unit )
+print ParamInfo</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetAnalysisParamNames">
+<code class="descname">GetAnalysisParamNames</code><span class="sig-paren">(</span><em>subject</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetAnalysisParamNames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the names of the analysis parameters associated with the specified subject</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject = string, name of an existing subject</dd>
+<dt>Returns</dt>
+<dd>names  = list of strings, one for each analysis parameter</dd>
+</dl>
+<p>Usage Example: Display all of the analysis parameters</p>
+<blockquote>
+<div>params = vicon.GetAnalysisParamNames( ‘Colin’ )
+print params</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetDeviceChannel">
+<code class="descname">GetDeviceChannel</code><span class="sig-paren">(</span><em>deviceID</em>, <em>deviceOutputID</em>, <em>channelID</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetDeviceChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a single channel of device data 
+from the channel identified by deviceID:deviceOutputID:channelID      
+A device can have multiple device outputs and each device output
+can have multiple channels associated with it</p>
+<p>Devices can run at different rates than the trial data.
+Channel data could have multiple samples for each trial frame. All samples for a channel are output.
+For data that has a higher sample rate than the trial frame rate, channel data can be interpreted as:</p>
+<blockquote>
+<div>frame1[sample1], frame1[sample2], … frame1[sampleN], … frameN[sample1], frameN[sample2], … frameN[sampleN]</div></blockquote>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>deviceID     = unsigned int, DeviceID of and existing device
+deviceOutputID  = unsigned int, DeviceOutputID of the device output you are interested in
+channelID    = unsigned int, ID of the channel</dd>
+<dt>Returns</dt>
+<dd><p class="first">channelData   = numerical(double) list, component data list of size NumberOfFrames * samplesPerFrame
+ready      = logical, T/F indication as to whether or not the device output is in the ready state</p>
+<blockquote>
+<div>if the device output is not in the ready state, there will not be any valid data
+associated with this device output component</div></blockquote>
+<p class="last">rate       = double value, sample rate of the channel data</p>
+</dd>
+</dl>
+<p>Usage Example:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetDeviceChannelAtFrame">
+<code class="descname">GetDeviceChannelAtFrame</code><span class="sig-paren">(</span><em>deviceID</em>, <em>deviceOutputID</em>, <em>channelID</em>, <em>frame</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetDeviceChannelAtFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a single frame of data 
+from the channel identified by deviceID:deviceOutputID:channelID
+A device can have multiple device outputs and each device output
+can have multiple channels associated with it</p>
+<p>Devices can run at different rates than the trial data.
+Channel data could have multiple samples for each trial frame. All samples for a channel are output.
+Channel data list will be in the format:</p>
+<blockquote>
+<div>[sample1], [sample2], … [sampleN]</div></blockquote>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>deviceID     = unsigned int, DeviceID of and existing device
+deviceOutputID  = unsigned int, DeviceOutputID of the device output you are interested in
+channelID    = unsigned int, ID of the channel
+frame      = integer value, trial frame number as displayed in the application time bar</dd>
+<dt>Returns</dt>
+<dd><p class="first">channelData   = numerical(double) list, component data list for the frame of size samplesPerFrame
+ready      = logical, T/F indication as to whether or not the device output is in the ready state</p>
+<blockquote>
+<div>if the device output is not in the ready state, there will not be any valid data
+associated with this device output component</div></blockquote>
+<p class="last">rate       = double value, sample rate of the channel data</p>
+</dd>
+</dl>
+<p>Usage Example:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetDeviceChannelForFrame">
+<code class="descname">GetDeviceChannelForFrame</code><span class="sig-paren">(</span><em>deviceID</em>, <em>deviceOutputID</em>, <em>channelID</em>, <em>frame</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetDeviceChannelForFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a single frame of data 
+from the channel identified by deviceID:deviceOutputID:channelID
+This function will return data corresponding to the requested optical frame.
+A device can have multiple device outputs and each device output
+can have multiple channels associated with it</p>
+<p>Devices can run at different rates than the trial data.
+Channel data could have multiple samples for each trial frame. All samples for a channel are output.
+Channel data list will be in the format:</p>
+<blockquote>
+<div>[sample1], [sample2], … [sampleN]</div></blockquote>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>deviceID     = unsigned int, DeviceID of and existing device
+deviceOutputID  = unsigned int, DeviceOutputID of the device output you are interested in
+channelID    = unsigned int, ID of the channel
+frame      = integer value, trial frame number as displayed in the application time bar</dd>
+<dt>Returns</dt>
+<dd><p class="first">channelData   = numerical(double) list, component data list for the frame of size samplesPerFrame
+ready      = logical, T/F indication as to whether or not the device output is in the ready state</p>
+<blockquote>
+<div>if the device output is not in the ready state, there will not be any valid data
+associated with this device output component</div></blockquote>
+<p class="last">rate       = double value, sample rate of the channel data</p>
+</dd>
+</dl>
+<p>Usage Example:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetDeviceChannelGlobal">
+<code class="descname">GetDeviceChannelGlobal</code><span class="sig-paren">(</span><em>deviceID</em>, <em>deviceOutputID</em>, <em>channelID</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetDeviceChannelGlobal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a single channel of global device data 
+from the channel identified by deviceID:deviceOutputID:channelID  
+A device can have multiple device outputs and each device output
+can have multiple channels associated with it</p>
+<p>Devices can run at different rates than the trial data.
+Channel data could have multiple samples for each trial frame. All samples for a channel are output.
+For data that has a higher sample rate than the trial frame rate, channel data can be interpreted as:</p>
+<blockquote>
+<div>frame1[sample1], frame1[sample2], … frame1[sampleN], … frameN[sample1], frameN[sample2], … frameN[sampleN]</div></blockquote>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>deviceID     = unsigned int, DeviceID of and existing device
+deviceOutputID  = unsigned int, DeviceOutputID of the device output you are interested in
+channelID    = unsigned int, ID of the channel</dd>
+<dt>Returns</dt>
+<dd><p class="first">channelData   = numerical(double) list, component data list of size NumberOfFrames * samplesPerFrame
+ready      = logical, T/F indication as to whether or not the device output is in the ready state</p>
+<blockquote>
+<div>if the device output is not in the ready state, there will not be any valid data
+associated with this device output component</div></blockquote>
+<p class="last">rate       = double value, sample rate of the channel data</p>
+</dd>
+</dl>
+<p>Usage Example:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetDeviceChannelGlobalAtFrame">
+<code class="descname">GetDeviceChannelGlobalAtFrame</code><span class="sig-paren">(</span><em>deviceID</em>, <em>deviceOutputID</em>, <em>channelID</em>, <em>frame</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetDeviceChannelGlobalAtFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a single frame of global data 
+from a channel identified by deviceID:deviceOutputID:channelID
+A device can have multiple device outputs and each device output
+can have multiple channels associated with it</p>
+<p>Devices can run at different rates than the trial data.
+Channel data could have multiple samples for each trial frame. All samples for a channel are output.
+Channel data list will be in the format:</p>
+<blockquote>
+<div>[sample1], [sample2], … [sampleN]</div></blockquote>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>deviceID     = unsigned int, DeviceID of and existing device
+deviceOutputID  = unsigned int, DeviceOutputID of the device output you are interested in
+channelID    = unsigned int, ID of the channel
+frame      = integer value, trial frame number as displayed in the application time bar</dd>
+<dt>Returns</dt>
+<dd><p class="first">channelData   = numerical(double) list, component data list for the frame of size samplesPerFrame
+ready      = logical, T/F indication as to whether or not the device output is in the ready state</p>
+<blockquote>
+<div>if the device output is not in the ready state, there will not be any valid data
+associated with this device output component</div></blockquote>
+<p class="last">rate      = double value, sample rate of the channel data</p>
+</dd>
+</dl>
+<p>Usage Example:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetDeviceChannelGlobalForFrame">
+<code class="descname">GetDeviceChannelGlobalForFrame</code><span class="sig-paren">(</span><em>deviceID</em>, <em>deviceOutputID</em>, <em>channelID</em>, <em>frame</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetDeviceChannelGlobalForFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a single frame of global data 
+from a channel identified by deviceID:deviceOutputID:channelID
+A device can have multiple device outputs and each device output
+can have multiple channels associated with it
+This function will return data corresponding to the requested optical frame.</p>
+<p>Devices can run at different rates than the trial data.
+Channel data could have multiple samples for each trial frame. All samples for a channel are output.
+Channel data list will be in the format:</p>
+<blockquote>
+<div>[sample1], [sample2], … [sampleN]</div></blockquote>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>deviceID     = unsigned int, DeviceID of and existing device
+deviceOutputID  = unsigned int, DeviceOutputID of the device output you are interested in
+channelID    = unsigned int, ID of the channel
+frame      = integer value, trial frame number as displayed in the application time bar</dd>
+<dt>Returns</dt>
+<dd><p class="first">channelData   = numerical(double) list, component data list for the frame of size samplesPerFrame
+ready      = logical, T/F indication as to whether or not the device output is in the ready state</p>
+<blockquote>
+<div>if the device output is not in the ready state, there will not be any valid data
+associated with this device output component</div></blockquote>
+<p class="last">rate      = double value, sample rate of the channel data</p>
+</dd>
+</dl>
+<p>Usage Example:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetDeviceChannelIDFromName">
+<code class="descname">GetDeviceChannelIDFromName</code><span class="sig-paren">(</span><em>deviceID</em>, <em>deviceOutputID</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetDeviceChannelIDFromName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the channel ID for the named device output channel ‘name’ associated with device output ‘deviceOutputID’ fof the device with the ID ‘deviceID’
+GetDeviceChannelIDFromName will search the specified device
+output and return the channel ID with the name ‘name’.
+The deviceChannelID is used for all device output channelcommunication.</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>deviceID    = unsigned int, DeviceID of and existing device
+deviceOutputID = unsigned int, DeviceOutputID of the device output you are interested in
+name      = string, name of a known channel, names are case sensitive</dd>
+<dt>Returns</dt>
+<dd>channelID    = unsigned int, ChannelID of the device with name ‘name’</dd>
+</dl>
+<p>Usage Example:</p>
+<blockquote>
+<div>channelID = vicon.GetDeviceChannelIDFromName( 1, 1, ‘Fx’ )</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetDeviceDetails">
+<code class="descname">GetDeviceDetails</code><span class="sig-paren">(</span><em>deviceID</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetDeviceDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return detailed information about a specific device.
+Every device will have associated device outputs. Communication with 
+the device outputs is done by using a DeviceOutputID to identify the 
+specific device output.</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>deviceID    = string, DeviceID of the device you are interested in</dd>
+<dt>Returns</dt>
+<dd><p class="first">name      = string, name of the device (may be blank)
+type      = string, device type. Valid options are</p>
+<blockquote>
+<div>‘ForcePlate’, ‘EyeTracker’, ‘Other’</div></blockquote>
+<p>rate      = double value, rate at which the device runs
+deviceOutputIDs = unsigned int, list of the DeviceOutputIDs
+forceplate   = NexusForcePlate, additional info if the device</p>
+<blockquote>
+<div>is a force plate</div></blockquote>
+<dl class="last docutils">
+<dt>eyetracker   = NexusEyeTracker, additional info if the device</dt>
+<dd>is an eye tracker</dd>
+</dl>
+</dd>
+</dl>
+<p>Usage Example: Display the name and type of a device</p>
+<blockquote>
+<div>name, type, rate, deviceOutputIDs, forceplate, eyetracker = vicon.GetDeviceDetails( ‘1’ )
+DeviceDisplay = ‘DeviceID: {0} is named {1} and it is a {2} device’ ].format( deviceID, name, type )
+print DeviceDisplay</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetDeviceIDFromName">
+<code class="descname">GetDeviceIDFromName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetDeviceIDFromName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the device ID for the device using the specified name 
+The DeviceID is used for all device communication.</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>name   = string, name of a known device, device names are case sensitive</dd>
+<dt>Returns</dt>
+<dd>deviceID = string, DeviceID of the device with name ‘name’</dd>
+</dl>
+<p>Usage Example: retrieve the DeviceID for a named forceplate</p>
+<blockquote>
+<div>DeviceID = vicon.GetDeviceIDFromName( ‘MyForcePlate’ )</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetDeviceIDs">
+<code class="descname">GetDeviceIDs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetDeviceIDs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a list of the unique identifiers of the analog devices
+The DeviceID is used for all device communication. A device may also be ‘named’
+although having a device name is not a requirement.</p>
+<dl class="docutils">
+<dt>Returns</dt>
+<dd>deviceIDs = list of unsigned ints, one for each device</dd>
+</dl>
+<p>Usage Example: retrieve the list of device identifiers</p>
+<blockquote>
+<div><p>devices = vicon.GetDeviceIDs()
+for device in devices:</p>
+<blockquote>
+<div>print device</div></blockquote>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetDeviceNames">
+<code class="descname">GetDeviceNames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetDeviceNames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a list device names. 
+Device names are not required, access to device data is done using the DeviceID</p>
+<dl class="docutils">
+<dt>Returns</dt>
+<dd>deviceNames = list of strings, one for each named device</dd>
+</dl>
+<p>Usage Example:</p>
+<blockquote>
+<div>deviceNames = vicon.GetDeviceNames()</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetDeviceOutputDetails">
+<code class="descname">GetDeviceOutputDetails</code><span class="sig-paren">(</span><em>deviceID</em>, <em>deviceOutputID</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetDeviceOutputDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns detailed information about a specific device output.</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>deviceID    = unsigned int, DeviceID of and existing device
+deviceOutputID = unsigned int, DeviceOutputID of the device output you are interested in</dd>
+<dt>Returns</dt>
+<dd><p class="first">name      = string, name of the device (may be blank)
+type      = string, device output type. 
+unit      = string, unit name
+ready      = logical value, indication of whether or not the output is in the ready state
+channelNames  = string list, list of channel names associated with the output,</p>
+<blockquote>
+<div>channel names are not required, data access is acheived using the channelID</div></blockquote>
+<p class="last">channelIDs   = unsigned int list, list of channel IDs associated with the output</p>
+</dd>
+</dl>
+<p>Usage Example:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetDeviceOutputIDFromName">
+<code class="descname">GetDeviceOutputIDFromName</code><span class="sig-paren">(</span><em>deviceID</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetDeviceOutputIDFromName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the device output ID for the named device output ‘name’ associated with device with the ID ‘deviceID’
+The DeviceOutputID is used for all device output communication.</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>deviceID  = unsigned int, DeviceID of and existing device
+name      = string, name of a known device output, names are case sensitive</dd>
+<dt>Returns</dt>
+<dd>deviceOutputID = unsigned int, DeviceOutputID of the device output with name ‘name’ from device with the ID ‘deviceID’</dd>
+</dl>
+<p>Usage Example: retrieve the DeviceOutputID for a named output</p>
+<blockquote>
+<div>DeviceOutputID = vicon.GetDeviceOutputIDFromName( 1, ‘Force’ )</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetEvents">
+<code class="descname">GetEvents</code><span class="sig-paren">(</span><em>subject</em>, <em>context</em>, <em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetEvents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all of the events that match the specified subject, context, and event type</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd><p class="first">subject     = string, name of an existing subject
+context     = string, name of the context.</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><a href="#id13"><span class="problematic" id="id14">**</span></a>* use the DisplayCommandHelp method to get more information on</dt>
+<dd>context names that are valid for the connected application</dd>
+</dl>
+</div></blockquote>
+<dl class="last docutils">
+<dt>event       = string, name of the event type. </dt>
+<dd><dl class="first last docutils">
+<dt><a href="#id15"><span class="problematic" id="id16">**</span></a>* use the DisplayCommandHelp method to get more information on</dt>
+<dd>event type names that are valid for the connected application</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>Returns</dt>
+<dd><p class="first">frames     = integer list, list of the event frame numbers
+offsets    = double list, offset (in seconds) from the beginning of the frame</p>
+<blockquote class="last">
+<div>to the event occurrence for each event
+The value should be in the range of 0.00 to 1/FrameRate</div></blockquote>
+</dd>
+</dl>
+<p>Usage Example:</p>
+<blockquote>
+<div>frames, offsets = vicon.GetEvents( ‘Patricia’, ‘Left’, ‘Foot Strike’ )</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetFrameRate">
+<code class="descname">GetFrameRate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetFrameRate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the base frame rate for the loaded trial</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetJointDetails">
+<code class="descname">GetJointDetails</code><span class="sig-paren">(</span><em>subject</em>, <em>joint</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetJointDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves detailed information about a joint</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject = string, name of an existing subject
+joint  = string, name of an existing joint for the subject</dd>
+<dt>Returns</dt>
+<dd>parent  = string, name of the parent segment
+child  = string, name of the child segment</dd>
+</dl>
+<p>Usage Example: Display information about the first joint</p>
+<blockquote>
+<div>joints = vicon.GetJointNames( ‘Colin’ )
+firstjoint = joints[0]
+parent, child = vicon.GetJointDetails( ‘Colin’, firstjoint )
+JointDisplay = ‘Joint: ‘ % firstjoint % ‘ ( ‘ % parent % ‘ - ‘ % child, ‘ )’
+print JointDisplay</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetJointNames">
+<code class="descname">GetJointNames</code><span class="sig-paren">(</span><em>subject</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetJointNames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the names of the joints associated with the specified subject</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject = string, name of an existing subject</dd>
+<dt>Returns</dt>
+<dd>names  = list of strings, one for each joint</dd>
+</dl>
+<p>Usage Example: Display the name of the first joint</p>
+<blockquote>
+<div>joints = vicon.GetJointNames( ‘Colin’ )
+firstjoint = joints[0]
+print firstjoint</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetMarkerNames">
+<code class="descname">GetMarkerNames</code><span class="sig-paren">(</span><em>subject</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetMarkerNames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the names of the markers associated with the specified subject</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject = string, name of an existing subject</dd>
+<dt>Returns</dt>
+<dd>names  = list of strings, one for each marker</dd>
+</dl>
+<p>Usage Example: Display the name of the first marker</p>
+<blockquote>
+<div>markers = vicon.GetMarkerNames( ‘Colin’ )
+firstmarker = markers[0]
+print firstmarker</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetModelOutput">
+<code class="descname">GetModelOutput</code><span class="sig-paren">(</span><em>subject</em>, <em>modelOutputName</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetModelOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data values for all components of a model output for all frames in the trial</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject     = string, name of an existing subject
+modelOutputName = string, name of an existing model output associated with the subject</dd>
+<dt>Returns</dt>
+<dd>components   = numerical(double) NxM matrix where N is the number of components, M is the number of frames
+e        = logical list, T/F indication as to whether the data exists for each frame</dd>
+</dl>
+<p>Usage Example: Copy the data from one model output to another</p>
+<blockquote>
+<div>[data, exists] = vicon.GetModelOutput( ‘Colin’, ‘LeftHipAngle’ )
+vicon.SetModelOutput( ‘Colin’, ‘NewAngle’, data, exists )</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetModelOutputAtFrame">
+<code class="descname">GetModelOutputAtFrame</code><span class="sig-paren">(</span><em>subject</em>, <em>modelOutputName</em>, <em>frame</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetModelOutputAtFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data values for all components of a model output at a specific frame</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject         = string, name of an existing subject
+modelOutputName = string, name of an existing model output associated with the subject
+frame           = integer value, trial frame number as displayed in the application time bar</dd>
+<dt>Returns</dt>
+<dd>components = numerical(double) list, one value for each component
+e          = logical value, T/F indication as to whether the data exists for the frame</dd>
+</dl>
+<p>Usage Example: offset model output data by 100.0 at frame 50</p>
+<blockquote>
+<div><p>data, exists = vicon.GetModelOutputAtFrame( ‘Colin’, ‘NewAngle’, 50 )
+for value in data:</p>
+<blockquote>
+<div>value = value + 100.0</div></blockquote>
+<p>vicon.SetModelOutputAtFrame( ‘Colin’, ‘NewAngle’, 50, data, True )</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetModelOutputDetails">
+<code class="descname">GetModelOutputDetails</code><span class="sig-paren">(</span><em>subject</em>, <em>modelOutputName</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetModelOutputDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve detailed information about a model output</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject     = string, name of an existing subject
+modelOutputName = string, name of an existing model output associated with the subject</dd>
+<dt>Returns</dt>
+<dd><p class="first">group   = string, name of the group the model output belongs to
+components = list of strings, list of component names for the model output
+types   = list of strings, list of the quantity types for each component</p>
+<blockquote class="last">
+<div><a href="#id17"><span class="problematic" id="id18">**</span></a>* use the DisplayCommandHelp method to get more information on
+quantity types that are valid for the connected application</div></blockquote>
+</dd>
+</dl>
+<p>Usage Example: Create a new model output with the same properties as an existing model output</p>
+<blockquote>
+<div>group, components, types = vicon.GetModelOutputDetails( ‘Colin’, ‘LeftHipAngle’ )
+vicon.CreateModelOutput( ‘Colin’, ‘NewModelOutput’, group, components, types )</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetModelOutputNames">
+<code class="descname">GetModelOutputNames</code><span class="sig-paren">(</span><em>subject</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetModelOutputNames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the names of the model outputs associated with the specified subject</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject = string, name of an existing subject</dd>
+<dt>Returns</dt>
+<dd>names  = list of strings, one for each model output</dd>
+</dl>
+<p>Usage Example: Display the name of the first model output</p>
+<blockquote>
+<div>modeloutputs = vicon.GetModelOutputNames( ‘Colin’ )
+firstmodeloutput = modeloutputs[0]
+print firstmodeloutput</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetRootSegment">
+<code class="descname">GetRootSegment</code><span class="sig-paren">(</span><em>subject</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetRootSegment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the name of the root segment associated with the specified subject</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject = string, name of an existing subject</dd>
+<dt>Returns</dt>
+<dd>name  = string, name of the root segment</dd>
+</dl>
+<p>Usage Example: Display the children of the root segment</p>
+<blockquote>
+<div><p>root = vicon.GetRootSegment( ‘Colin’ )
+children = vicon.GetSegmentDetails( ‘Colin’, root )[1]
+for child in children:</p>
+<blockquote>
+<div>print child</div></blockquote>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetSegmentDetails">
+<code class="descname">GetSegmentDetails</code><span class="sig-paren">(</span><em>subject</em>, <em>segment</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetSegmentDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves detailed information about a segment</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject = string, name of an existing subject
+segment = string, name of an existing segment for the subject</dd>
+<dt>Returns</dt>
+<dd><dl class="first docutils">
+<dt>parent  = string, name of the parent segment</dt>
+<dd><a href="#id19"><span class="problematic" id="id20">**</span></a>* the root segment will have a parent named ‘World’</dd>
+</dl>
+<p class="last">children = list of strings, names of the child segments  
+markers = list of strings, names of the markers associated with the segment</p>
+</dd>
+</dl>
+<p>Usage Example: Display the children of the root segment</p>
+<blockquote>
+<div><p>root = vicon.GetRootSegment( ‘Colin’ )
+children = vicon.GetSegmentDetails( ‘Colin’, root )[1]
+for child in children:</p>
+<blockquote>
+<div>print child</div></blockquote>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetSegmentNames">
+<code class="descname">GetSegmentNames</code><span class="sig-paren">(</span><em>subject</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetSegmentNames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the names of the segments associated with the specified subject</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject = string, name of an existing subject</dd>
+<dt>Returns</dt>
+<dd>names  = list of strings, one for each segment</dd>
+</dl>
+<p>Usage Example: Display the name of the first segment</p>
+<blockquote>
+<div>segments = vicon.GetSegmentNames( ‘Colin’ )
+firstsegment = segments[0]
+print firstsegment</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetServerInfo">
+<code class="descname">GetServerInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetServerInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return information about the connected server</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetSplineResults">
+<code class="descname">GetSplineResults</code><span class="sig-paren">(</span><em>derivative</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetSplineResults" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return derivative values from an initialized spline object.</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>frames    = numerical(int) list, frame numbers of the supplied data
+x         = numerical(double) list, x-coordinate of the trajectory
+y         = numerical(double) list, y-coordinate of the trajectory
+z         = numerical(double) list, z-coordinate of the trajectory
+frameRate = double, frame rate of the supplied data</dd>
+</dl>
+<p>Usage Example:</p>
+<blockquote>
+<div><p>frameRate = vicon.GetFrameRate()
+startFrame, endFrame = vicon.GetTrialRange()
+frames = range( startFrame, endFrame + 1 )
+[trajX, trajY, trajZ, e] = vicon.GetTrajectory( ‘Colin’, ‘LKNE’ )
+# get valid indices; we only want to submit good values here!            
+validIndices = [ x for x, y in enumerate(e) if y ]
+validF = [ frames[ Index ] for Index in validIndices ]
+validX = [ trajX[ Index ] for Index in validIndices ]
+validY = [ trajY[ Index ] for Index in validIndices ]
+validZ = [ trajZ[ Index ] for Index in validIndices ]
+vicon.SubmitSplineTrajectory(validF, validX, validY, validZ, frameRate)</p>
+<p>accX, accY, accZ = vicon.GetSplineResults(2);</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetSubjectInfo">
+<code class="descname">GetSubjectInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetSubjectInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the names, templates and active states of the currently loaded subjects</p>
+<dl class="docutils">
+<dt>Returns</dt>
+<dd>names = list of strings, one for each subject
+templates = list of strings, one for each subject
+active = list of bools, one for each subject</dd>
+</dl>
+<p>Usage Example: list the names of the currently loaded subjects</p>
+<blockquote>
+<div><p>subjects, templates, activeStates = vicon.GetSubjectInfo()
+for subject, template, active in zip( subjects, templates, activeStates ):</p>
+<blockquote>
+<div>print ‘Subject Name: {}, Template Name: {}, Active: {}’.format( subject, template, active )</div></blockquote>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetSubjectNames">
+<code class="descname">GetSubjectNames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetSubjectNames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the names of the currently loaded subjects</p>
+<dl class="docutils">
+<dt>Returns</dt>
+<dd>names = list of strings, one for each subject</dd>
+</dl>
+<p>Usage Example: list the names of the currently loaded subjects</p>
+<blockquote>
+<div><p>subjects = vicon.GetSubjectNames()
+for subject in subjects:</p>
+<blockquote>
+<div>print subject</div></blockquote>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetSubjectParam">
+<code class="descname">GetSubjectParam</code><span class="sig-paren">(</span><em>subject</em>, <em>param</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetSubjectParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the current value of a static subject parameter</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject = string, name of an existing subject  
+param  = string, name of an existing subject parameter</dd>
+<dt>Returns</dt>
+<dd>value  = floating point number, current value of the subject parameter
+hasvalue = logical, indication as to whether the subject parameter has a value</dd>
+</dl>
+<p>Usage Example: negate the value of a subject parameter</p>
+<blockquote>
+<div>value = vicon.GetSubjectParam( ‘Colin’, ‘MyParam’ )
+value = value * (-1)
+vicon.SetSubjectParam( ‘Colin’, ‘MyParam’, value )</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetSubjectParamDetails">
+<code class="descname">GetSubjectParamDetails</code><span class="sig-paren">(</span><em>subject</em>, <em>param</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetSubjectParamDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve detailed information about a subject parameter</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject = string, name of an existing subject  
+param  = string, name an existing subject parameter</dd>
+<dt>Returns</dt>
+<dd><p class="first">value  = floating point number, current value of the subject parameter
+unit   = string, unit associated with the value</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><a href="#id21"><span class="problematic" id="id22">**</span></a>* use the DisplayCommandHelp method to get more information on</dt>
+<dd>units that are valid for the connected application</dd>
+</dl>
+</div></blockquote>
+<p class="last">default = floating point number, PRIOR value of the subject parameter
+required = logical, indication as to whether the subject parameter is a required parameter
+hasvalue = logical, indication as to whether the subject parameter has a value</p>
+</dd>
+</dl>
+<p>Usage Example: Display subject parameter details</p>
+<blockquote>
+<div><p>value, unit, default, required = vicon.GetSubjectParamDetails( ‘Colin’, ‘MyParam’ )
+isRequired = ‘ Not Required’
+if( required ):</p>
+<blockquote>
+<div>isRequired = ‘ Required’</div></blockquote>
+<p>SubjectParamInfo = ‘MyParam = {0} [{1}] Default={2}, {3}’.format( value, unit, default, isRequired )
+print SubjectParamInfo</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetSubjectParamNames">
+<code class="descname">GetSubjectParamNames</code><span class="sig-paren">(</span><em>subject</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetSubjectParamNames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the names of the static subject parameters associated with the specified subject</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject = string, name of an existing subject</dd>
+<dt>Returns</dt>
+<dd>names  = list of strings, one for each subject parameter</dd>
+</dl>
+<p>Usage Example: Display all of the subject parameters</p>
+<blockquote>
+<div>subjectparams = vicon.GetSubjectParamNames( ‘Colin’ )
+print subjectparams</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetTrajectory">
+<code class="descname">GetTrajectory</code><span class="sig-paren">(</span><em>subject</em>, <em>marker</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetTrajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all frames of data for the trial for the specified marker.</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject = string, name of an existing subject  
+marker  = string, name of an existing marker</dd>
+<dt>Returns</dt>
+<dd>x    = numerical(double) list, x-coordinates of the trajectory
+y    = numerical(double) list, y-coordinates of the trajectory
+z    = numerical(double) list, z-coordinates of the trajectory
+e    = logical list, T/F indication as to whether the data exists for each frame</dd>
+</dl>
+<p>Usage Example: Display trajectory coordinate at frame 50</p>
+<blockquote>
+<div><p>trajX, trajY, trajZ, trajExists = vicon.GetTrajectory( ‘Colin’, ‘C7’ )
+doesexist = ‘ - Missing Data’
+if( trajExists[49] ):</p>
+<blockquote>
+<div>doesexist = ‘ - exists’</div></blockquote>
+<p>framedata = ‘frame 50 = ({0}, {1}, {2}){3}’.format( trajX[49], trajY[49], trajZ[49], doesexist )
+print framedata</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetTrajectoryAtFrame">
+<code class="descname">GetTrajectoryAtFrame</code><span class="sig-paren">(</span><em>subject</em>, <em>marker</em>, <em>frame</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetTrajectoryAtFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get trajectory data at a specific frame for the specified marker</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject = string, name of an existing subject  
+marker  = string, name of an existing marker
+frame  = integer value, trial frame number as displayed in the application time bar</dd>
+<dt>Returns</dt>
+<dd>x    = double value, x-coordinate of the trajectory
+y    = double value, y-coordinate of the trajectory
+z    = double value, z-coordinate of the trajectory
+e    = logical value, T/F indication as to whether the data exists for the frame</dd>
+</dl>
+<p>Usage Example: Display trajectory coordinate at frame 50</p>
+<blockquote>
+<div><p>[markerX, markerY, markerZ, markerExists] = vicon.GetTrajectoryAtFrame( ‘Colin’, ‘C7’, 50 )
+doesexist = ‘ - Missing Data’
+if( markerExists ):</p>
+<blockquote>
+<div>doesexist = ‘ - exists’</div></blockquote>
+<p>framedata = [‘frame 50 = ‘, num2str(markerX), ‘, ‘, num2str(markerY), ‘, ‘, num2str(markerZ), doesexist ]
+print framedata</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetTrialName">
+<code class="descname">GetTrialName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetTrialName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the name and path for the loaded trial</p>
+<dl class="docutils">
+<dt>Returns</dt>
+<dd>path = string, path to the trial on disk
+name = string, name of the trial</dd>
+</dl>
+<p>Usage Example: create a filename to be used for a user
+generated output file</p>
+<blockquote>
+<div>path, name = vicon.gettrialname()
+MyFilename = path % name %’.MyFile’</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetTrialRange">
+<code class="descname">GetTrialRange</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetTrialRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the starting and ending frame numbers of the
+updateable range for the loaded trial</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetTrialRegionOfInterest">
+<code class="descname">GetTrialRegionOfInterest</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetTrialRegionOfInterest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the starting and ending frame numbers of the
+user set region of interest for the loaded trial</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetUnlabeled">
+<code class="descname">GetUnlabeled</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetUnlabeled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all frames of data for the trial for the specified unlabeled trajectory.</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>index  = index of the unlabeled trajectory to return</dd>
+<dt>Returns</dt>
+<dd>x    = numerical(double) list, x-coordinates of the trajectory
+y    = numerical(double) list, y-coordinates of the trajectory
+z    = numerical(double) list, z-coordinates of the trajectory
+e    = logical list, T/F indication as to whether the data exists for each frame</dd>
+</dl>
+<p>Usage Example: Display trajectory coordinate at frame 50 of unlabeled trajectory 25</p>
+<blockquote>
+<div><p>trajX, trajY, trajZ, trajExists = vicon.GetUnlabeled( 25 )
+doesexist = ‘ - Missing Data’
+if( trajExists[49] ):</p>
+<blockquote>
+<div>doesexist = ‘ - exists’</div></blockquote>
+<p>framedata = ‘frame 50 = ({0}, {1}, {2}){3}’.format( trajX[49], trajY[49], trajZ[49], doesexist )
+print framedata</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.GetUnlabeledCount">
+<code class="descname">GetUnlabeledCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.GetUnlabeledCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of unlabeled trajectories in the loaded trial</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.HasTrajectory">
+<code class="descname">HasTrajectory</code><span class="sig-paren">(</span><em>subject</em>, <em>marker</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.HasTrajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if the specified marker is associated with a trajectory</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject  = string, name of an existing subject   
+marker   = string, name of an existing marker</dd>
+<dt>Returns</dt>
+<dd>exists   = T/F indication as to whether the specified marker is associated with a trajectory</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.OpenTrial">
+<code class="descname">OpenTrial</code><span class="sig-paren">(</span><em>trial</em>, <em>timeout</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.OpenTrial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a trial in the connected host application. This command may be used
+from within Python but can not be used in a script that is executing from the application.
+The trial will fail to load if a pipeline is running, the application is in live mode, the 
+ENF file for the trial can not be located, or the application is in a state where trial 
+opening is prohibited.</p>
+<p>If unsaved data is currently loaded in the application, the application may prompt you to save the data.
+To prevent the application prompt, you should save the current trial data prior to attempting to 
+load another trial.</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd><p class="first">trial      = string, name of an existing trial including its full path, excluding any file extensions.
+timeout    = integer value, timeout value (in seconds) used to return control in the case that</p>
+<blockquote class="last">
+<div>the trial does not open in a timely fashion. It is important to note that
+the timeout value has no effect in the host application itself and the trial
+may continue to load after the time allocated has expired.</div></blockquote>
+</dd>
+</dl>
+<p>Usage Example:</p>
+<blockquote>
+<div>vicon.OpenTrial( r’C:UsersPublicDocumentsViconNexus Sample DataColinWalking TrialsWalking 2’, 30 )</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.RunPipeline">
+<code class="descname">RunPipeline</code><span class="sig-paren">(</span><em>pipeline</em>, <em>location</em>, <em>timeout</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.RunPipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a pipeline in the connected host application. This command may be used
+from within Python but can not be used in a script that is executing from the application.
+The pipeline will fail to run if another pipeline is already in progress.</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd><p class="first">pipeline        = string, name of an existing pipeline.
+location        = string, location of the pipeline. Pass a blank string to use the default</p>
+<blockquote>
+<div>searching mechanism to locate the pipeline. Valid options when specifying the 
+pipeline location are Private, Shared or System.</div></blockquote>
+<dl class="last docutils">
+<dt>timeout         = integer value, timeout value (in seconds) used to return control in the case that</dt>
+<dd>the pipeline does not complete in a timely fashion. It is important to note that
+the timeout value has no effect in the host application itself and the pipeline
+may continue to run after the time allocated has expired.</dd>
+</dl>
+</dd>
+</dl>
+<p>Usage Example:</p>
+<blockquote>
+<div>vicon.RunPipeline( ‘Reconstruct’, ‘’, 45 )</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.SaveTrial">
+<code class="descname">SaveTrial</code><span class="sig-paren">(</span><em>timeout</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.SaveTrial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the trial currently open in the connected host application to disk.
+This command may be used from within Python but can not be used in a script that is 
+executing from the application.
+The trial will fail to save if a pipeline is running or the application is is live mode.</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd><dl class="first last docutils">
+<dt>timeout     = integer value, timeout value (in seconds) used to return control in the case that</dt>
+<dd>the trial does not save in a timely fashion. It is important to note that
+the timeout value has no effect in the host application itself and the trial
+may continue to save after the time allocated has expired.</dd>
+</dl>
+</dd>
+</dl>
+<p>Usage Example:</p>
+<blockquote>
+<div>vicon.SaveTrial( 30 )</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.SetAnalysisParam">
+<code class="descname">SetAnalysisParam</code><span class="sig-paren">(</span><em>subject</em>, <em>param</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.SetAnalysisParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the current value of an analysis parameter</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject = string, name of an existing subject  
+param  = string, name of an existing analysis parameter 
+value  = floating point number, desired value of the analysis parameter</dd>
+</dl>
+<p>Usage Example: negate the value of a analysis parameter</p>
+<blockquote>
+<div>value = vicon.GetAnalysisParam( ‘Colin’, ‘MyParam’ )
+value = value * (-1)
+vicon.SetAnalysisParam( ‘Colin’, ‘MyParam’, value )</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.SetDeviceChannel">
+<code class="descname">SetDeviceChannel</code><span class="sig-paren">(</span><em>deviceID</em>, <em>deviceOutputID</em>, <em>channelID</em>, <em>channelData</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.SetDeviceChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update a single channel of device data for the specified 
+deviceID:deviceOutputID:channelID combination
+A device can have multiple device outputs and each device output
+can have multiple channels associated with it</p>
+<p>You may not update frames of data that have been marked as
+missing in the originally captured data, data for missing
+frames will be presented with zero values when retrieving
+data and input values for those frames will be ignored when
+updating the device data, although it must be supplied.</p>
+<p>Devices can run at different rates than the trial data.
+Channel data could have multiple samples for each data frame. 
+Channel data must be supplied for all of the samples.
+In the case that the channel sample rate is higher than the
+trial frame rate channel data is interpreted as:</p>
+<blockquote>
+<div>frame1[sample1], frame1[sample2], … frame1[sampleN], … 
+frameN[sample1], frameN[sample2], … frameN[sampleN]</div></blockquote>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>deviceID     = unsigned int, DeviceID of an existing device
+deviceOutputID  = unsigned int, DeviceOutputID of the device output 
+channelID    = unsigned int, ID of the channel
+channelData   = numerical(double) list, channel data list of size NumberOfFrames * samplesPerFrame</dd>
+</dl>
+<p>Usage Example:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.SetDeviceChannelAtFrame">
+<code class="descname">SetDeviceChannelAtFrame</code><span class="sig-paren">(</span><em>deviceID</em>, <em>deviceOutputID</em>, <em>channelID</em>, <em>frame</em>, <em>channelData</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.SetDeviceChannelAtFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update a single frame for a single channel
+of device data for the specified deviceID:deviceOutputID combination
+A device can have multiple channels associated with it</p>
+<p>You may not update frames of data that have been marked as
+missing in the originally captured data, data for missing
+frames will be presented with zero values when retrieving
+data and input values for those frames will be ignored when
+updating the device data, although it must be supplied.</p>
+<p>CAUTION: updating multiple frames of device data using this
+may execute noticably slower than using a single
+call to SetDeviceChannel supplying sample data for each trial frame
+even if they have not changed depending on the number of samples you
+are updating.</p>
+<p>Devices can run at different rates than the trial data.
+Channel data could have multiple samples for each trial frame. 
+Channel data list must be in the format:</p>
+<blockquote>
+<div>[sample1], [sample2], … [sampleN]</div></blockquote>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>deviceID     = unsigned int, DeviceID of and existing device
+deviceOutputID  = unsigned int, DeviceOutputID of the device output you are interested in
+channelID    = unsigned int, ID of the channel
+frame      = integer value, trial frame number as displayed in the application time bar
+channelData   = numerical(double) list, component data list for the frame of size samplesPerFrame</dd>
+</dl>
+<p>Usage Example:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.SetModelOutput">
+<code class="descname">SetModelOutput</code><span class="sig-paren">(</span><em>subject</em>, <em>modelOutputName</em>, <em>components</em>, <em>e</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.SetModelOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the data values for all components of a model output for all frames in the trial</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject     = string, name of the subject
+modelOutputName = string, name of an existing model output associated with the subject
+components   = numerical(double) NxM matrix where N is the number of components, M is the number of frames
+e        = logical list, T/F indication as to whether the data exists for each frame</dd>
+</dl>
+<p>Usage Example: Copy the data from one model output to another</p>
+<blockquote>
+<div>[data, exists] = vicon.GetModelOutput( ‘Colin’, ‘LeftHipAngle’ )
+vicon.SetModelOutput( ‘Colin’, ‘NewAngle’, data, exists )</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.SetModelOutputAtFrame">
+<code class="descname">SetModelOutputAtFrame</code><span class="sig-paren">(</span><em>subject</em>, <em>modelOutputName</em>, <em>frame</em>, <em>components</em>, <em>e</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.SetModelOutputAtFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the data values for all components of a model output at a specific frame</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject         = string, name of an existing subject
+modelOutputName = string, name of an existing model output associated with the subject
+frame           = integer value, trial frame number as displayed in the application time bar
+components      = numerical(double) list, one value for each component
+e               = logical value, T/F indication as to whether the data exists for the frame</dd>
+</dl>
+<p>Usage Example: offset model output data by 100.0 at frame 50</p>
+<blockquote>
+<div><p>data, exists = vicon.GetModelOutputAtFrame( ‘Colin’, ‘NewAngle’, 50 )
+for value in data:</p>
+<blockquote>
+<div>value = value + 100.0</div></blockquote>
+<p>vicon.SetModelOutputAtFrame( ‘Colin’, ‘NewAngle’, 50, data, True )</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.SetSubjectActive">
+<code class="descname">SetSubjectActive</code><span class="sig-paren">(</span><em>subjectName</em>, <em>activeState</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.SetSubjectActive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the active state of a subject by name</p>
+<dl class="docutils">
+<dt>Usage Examples:  </dt>
+<dd><p class="first">subjects = vicon.GetSubjectNames();
+for subject in subjects:</p>
+<blockquote>
+<div># enable all subjects
+vicon.SetSubjectActive( subject, ‘1’ )</div></blockquote>
+<dl class="docutils">
+<dt>for subject in subjects:</dt>
+<dd># disable all subjects
+vicon.SetSubjectActive( subject, False )</dd>
+<dt>for subject in subjects:</dt>
+<dd># enable all subjects again
+vicon.SetSubjectActive( subject, 1 )</dd>
+</dl>
+<p class="last"># enable only the first subject
+vicon.SetSubjectActive( subjects[0], ‘Exclusive’ )</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.SetSubjectParam">
+<code class="descname">SetSubjectParam</code><span class="sig-paren">(</span><em>subject</em>, <em>param</em>, <em>value</em>, <em>bForce=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.SetSubjectParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the current value of a static subject parameter</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject = string, name of an existing subject  
+param  = string, name of an existing subject parameter 
+value  = floating point number, desired value of the subject parameter</dd>
+</dl>
+<p>Usage Example: negate the value of a subject parameter</p>
+<blockquote>
+<div>value = vicon.GetSubjectParam( ‘Colin’, ‘MyParam’ )
+value = value * (-1)
+vicon.SetSubjectParam( ‘Colin’, ‘MyParam’, value )</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.SetTrajectory">
+<code class="descname">SetTrajectory</code><span class="sig-paren">(</span><em>subject</em>, <em>marker</em>, <em>x</em>, <em>y</em>, <em>z</em>, <em>e</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.SetTrajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update all of the data values for all frames in the trial for the specified marker.</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject = string, name of an existing subject  
+marker  = string, name of an existing marker
+x    = numerical(double) list, x-coordinate of the trajectory
+y    = numerical(double) list, y-coordinate of the trajectory
+z    = numerical(double) list, z-coordinate of the trajectory
+e    = logical list, T/F indication as to whether the data exists for each frame</dd>
+</dl>
+<p>Usage Example: Put the trajectory at 0,0,0 for all frames</p>
+<blockquote>
+<div><p>frameCount = vicon.GetFrameCount()
+trajX  = [0]*frameCount
+trajY  = [0]*frameCount
+trajZ  = [0]*frameCount
+exists = [True]*frameCount</p>
+<p>vicon.SetTrajectory(‘Colin’,’C7’,trajX,trajY,trajZ,exists)</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.SetTrajectoryAtFrame">
+<code class="descname">SetTrajectoryAtFrame</code><span class="sig-paren">(</span><em>subject</em>, <em>marker</em>, <em>frame</em>, <em>x</em>, <em>y</em>, <em>z</em>, <em>e</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.SetTrajectoryAtFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the trajectory data values at a specific frame for the specified marker</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>subject = string, name of an existing subject  
+marker  = string, name of an existing marker
+frame  = integer value, trial frame number as displayed in the application time bar
+x    = double value, x-coordinate of the trajectory
+y    = double value, y-coordinate of the trajectory
+z    = double value, z-coordinate of the trajectory
+e    = logical value, T/F indication as to whether the data exists for the frame</dd>
+</dl>
+<p>Usage Example: Create a gap at frame 50</p>
+<blockquote>
+<div>vicon.SetTrajectoryAtFrame( ‘Colin’, ‘C7’, 50, 0.0, 0.0, 0.0, False )</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.SetTrialRegionOfInterest">
+<code class="descname">SetTrialRegionOfInterest</code><span class="sig-paren">(</span><em>startFrame</em>, <em>EndFrame</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.SetTrialRegionOfInterest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the starting and ending frame numbers of the
+user set region of interest for the loaded trial</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ViconNexus.ViconNexus.SubmitSplineTrajectory">
+<code class="descname">SubmitSplineTrajectory</code><span class="sig-paren">(</span><em>frames</em>, <em>xData</em>, <em>yData</em>, <em>zData</em>, <em>frameRate</em><span class="sig-paren">)</span><a class="headerlink" href="#ViconNexus.ViconNexus.SubmitSplineTrajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize a spline object</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>frames    = numerical(int) list, frame numbers of the supplied data
+x         = numerical(double) list, x-coordinate of the trajectory
+y         = numerical(double) list, y-coordinate of the trajectory
+z         = numerical(double) list, z-coordinate of the trajectory
+frameRate = double, frame rate of the supplied data</dd>
+</dl>
+<p>Usage Example:</p>
+<blockquote>
+<div>frameRate = vicon.GetFrameRate()
+startFrame, endFrame = vicon.GetTrialRange()
+frames = range( startFrame, endFrame + 1 )
+[trajX, trajY, trajZ, e] = vicon.GetTrajectory( ‘Colin’, ‘LKNE’ )
+# get valid indices; we only want to submit good values here!            
+validIndices = [ x for x, y in enumerate(e) if y ]
+validF = [ frames[ Index ] for Index in validIndices ]
+validX = [ trajX[ Index ] for Index in validIndices ]
+validY = [ trajY[ Index ] for Index in validIndices ]
+validZ = [ trajZ[ Index ] for Index in validIndices ]
+vicon.SubmitSplineTrajectory(validF, validX, validY, validZ, frameRate)</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="highLevelFunction.html" class="btn btn-neutral float-right" title="High-level functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="nexusOperations.html" class="btn btn-neutral float-left" title="Nexus Operations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Fabien Leboeuf
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
