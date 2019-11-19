@@ -11,7 +11,6 @@ Welcome to pyCGM2 documentation!
 
     PyCGM2 documentation is in heavy development.
 
-    The current version focuses on Vicon nexus Applications
 
 
 
